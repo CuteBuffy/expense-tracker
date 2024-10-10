@@ -1,0 +1,48 @@
+.expenses__container {
+  display: flex;
+  background-color: #fff;
+  padding: 1.25rem 0.5rem;
+  box-shadow: var(--box-shadow)
+}
+
+.expenses__income {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.expenses__container div:first-of-type {
+  border-right: 1px solid hsl(0, 0%, 75%);
+}
+
+.expenses__expense {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.expenses__text {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.expenses__income__amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.expenses__expense__amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.income {
+  color: var(--clr-green)
+}
+
+.expense {
+  color: var(--clr-red)
+}

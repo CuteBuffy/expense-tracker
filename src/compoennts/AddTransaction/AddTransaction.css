@@ -1,0 +1,55 @@
+.add__transaction__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.add__transaction__text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form__control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form__control__text {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.form__input {
+  font-size: 1.1rem;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid hsl(0, 0%, 80%);
+  color: #000;
+  font-weight: 500;
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: hsl(0, 0%, 30%)
+  }
+}
+
+.form__btn {
+  color: #fff;
+  background-color: hsl(251, 64%, 70%);
+  font-size: 1.25rem;
+  padding: 0.5rem 0;
+  transition: background-color 0.25s ease;
+  &:hover {
+    cursor: pointer;
+    background-color: hsl(251, 64%, 80%);
+  }
+}

@@ -1,0 +1,45 @@
+.history__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.history__text {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.transactions__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.transaction__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--clr-white);
+  box-shadow: var(--box-shadow);
+}
+
+.transaction__income {
+  border-right: 0.4rem solid var(--clr-green);
+}
+
+.transaction__expense {
+  border-right: 0.4rem solid var(--clr-red);
+}
+
+.transaction_name {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.transaction__amount {
+  font-weight: 500;
+  font-size: 1.1rem;
+}

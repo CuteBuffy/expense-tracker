@@ -1,0 +1,14 @@
+.app__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  height: 100vh;
+}
+
+.app__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 25rem;
+}
