@@ -24,6 +24,9 @@
   padding: 0.5rem 0.75rem;
   background-color: var(--clr-white);
   box-shadow: var(--box-shadow);
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .transaction__income {

@@ -1,7 +1,8 @@
 import "./Header.css"
 
 function Header() {
-  return(
+
+  return (
     <>
       <h2 className="header__text">Expense Tracker</h2>
     </>

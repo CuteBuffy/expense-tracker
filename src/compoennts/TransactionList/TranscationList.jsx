@@ -1,25 +1,11 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { GlobalContext } from "../../context/GlobalState"
 import "./TransactionList.css"
 
 function TransactionList() {
 
-  const [transactions, setTranscactions] = useState([
-    {
-      id: 1,
-      name: "Cash",
-      amount: 50
-    },
-    {
-      id: 2,
-      name: "Bank",
-      amount: -40
-    },
-    {
-      id: 3,
-      name: "Cash",
-      amount: -200
-    },
-  ])
+  const { transactions } = useContext(GlobalContext)
+  const { deleteTransaction } = useContext(GlobalContext)
 
   return (
     <>
@@ -28,13 +14,16 @@ function TransactionList() {
         <hr />
         <div className="transactions__container">
           {transactions.map(transaction => {
+
+            const sign = transaction.amount < 0 ? "-" : "+"
+
             return (
-              <div key={transaction.id} className={`${transaction.amount >= 0 ? "transaction__income" : "transaction__expense"} transaction__container`}>
+              <div onClick={() => deleteTransaction(transaction.id)} key={transaction.id} className={`${transaction.amount >= 0 ? "transaction__income" : "transaction__expense"} transaction__container`}>
                 <p className="transaction_name">
                   {transaction.name}
                 </p>
                 <p className="transaction__amount">
-                  {transaction.amount >= 0 ? `+${transaction.amount}` : `-${transaction.amount}`}
+                  {sign}${Math.abs(transaction.amount)}
                 </p>
               </div>
             )
